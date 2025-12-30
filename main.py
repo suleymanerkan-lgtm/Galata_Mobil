@@ -40,7 +40,7 @@ def main(page: ft.Page):
     page.padding = 0
     page.bgcolor = COLOR_BG
     page.assets_dir = "assets"
-    page.window_icon = "galata_logo.png"
+    # page.window_icon = "galata_logo.png"
 
     def view_pop(view):
         page.views.pop()
@@ -1008,3 +1008,4 @@ def main(page: ft.Page):
     check_auto_login()
 
 ft.app(target=main)
+
