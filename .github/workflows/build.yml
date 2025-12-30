@@ -10,10 +10,10 @@ jobs:
 
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4  # v4 Guncellendi
+      uses: actions/checkout@v4
 
     - name: Setup Python
-      uses: actions/setup-python@v5 # v5 Guncellendi
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
@@ -28,10 +28,11 @@ jobs:
         flutter-version: '3.19.0'
 
     - name: Build APK
-      run: flet build apk --verbose 
+      # BURASI DUZELTILDI: Sorulan sorulara otomatik 'yes' der
+      run: yes | flet build apk --verbose 
 
     - name: Upload APK Artifact
-      uses: actions/upload-artifact@v4  # KRITIK DUZELTME BURADA (v4)
+      uses: actions/upload-artifact@v4
       with:
         name: galata-mobil-apk
         path: build/apk/app-release.apk
